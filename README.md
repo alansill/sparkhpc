@@ -8,6 +8,8 @@ This package tries to greatly simplify deploying and managing [Apache Spark](htt
 
 ## Installation
 
+Note doing all of this from within a virtual environment is recommended.
+
 ### From [pypi](https://pypi.python.org)
 
 ```
