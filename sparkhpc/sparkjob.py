@@ -58,6 +58,8 @@ def which(program):
     return None
 
 def get_scheduler():
+    """
+    Our cluster has bjobs defined but uses Slurm, so we need to hardwire the scheduler to Slurm to avoid interference
     if which('bjobs') is not None: 
         scheduler = 'lsf'
     elif which('squeue') is not None: 
@@ -65,6 +67,8 @@ def get_scheduler():
     else:
         scheduler = None
         logger.warn('No suitable scheduler found')
+    """
+    scheduler = 'slurm'
 
     return scheduler
 
